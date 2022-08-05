@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import "../sass/todo-item.css";
 import TodoForm from "./todoForm";
 
 export const TodoItem = ({ id, text, removeTodo, updateTodo, todos }) => {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../sass/todo-form.css";
+
 export default function TodoForm(props) {
   const [input, setInput] = useState(props.text ? props.text : "");
 

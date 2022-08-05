@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import TodoForm from "./componets/todoForm";
 import { TodoList } from "./componets/todoList";
-import "./sass/App.css";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
     const OldData = JSON.parse(localStorage.getItem("todo"));
-
-    setTodos([...OldData, ...todos].reverse());
+    if (OldData) setTodos([...OldData, ...todos].reverse());
   }, []);
 
   // create todo

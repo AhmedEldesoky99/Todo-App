@@ -1,7 +1,6 @@
 import React from "react";
 import { TodoItem } from "./todoItem";
 
-import "../sass/App.css";
 export const TodoList = ({ todos, setTodos, removeTodo, updateTodo }) => {
   return (
     <div className="todo-list">
