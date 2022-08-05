@@ -12,6 +12,12 @@
   color: rgb(113, 113, 113);
   gap: 2rem;
   overflow: hidden;
+  position: relative;
+}
+.todo-item .date {
+  position: absolute;
+  font-size: 1rem;
+  top: 0.8rem;
 }
 @media (max-width: 768px) {
   .todo-item {

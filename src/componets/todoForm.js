@@ -17,8 +17,10 @@ export default function TodoForm(props) {
       props.AddTodo({
         id: Math.floor(Math.random() * 1000),
         text: input,
+        date: new Date(),
       });
     }
+
     setInput("");
   };
 

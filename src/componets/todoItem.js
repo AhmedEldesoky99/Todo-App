@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "../sass/todo-item.css";
 import TodoForm from "./todoForm";
 
-export const TodoItem = ({ id, text, removeTodo, updateTodo }) => {
+export const TodoItem = ({ id, text, removeTodo, updateTodo, todos }) => {
   const [edit, setEdit] = useState(false);
 
   const handleRemove = () => {
@@ -13,11 +13,21 @@ export const TodoItem = ({ id, text, removeTodo, updateTodo }) => {
   const handleEdit = () => {
     setEdit(!edit);
   };
+  const options = {
+    hour: "numeric",
+    minute: "numeric",
+    day: "numeric",
+    month: "numeric",
+    year: "numeric",
+    // weekday: 'long',
+  };
+  const NewDate = new Intl.DateTimeFormat("en-GB", options).format(todos.date);
 
   return (
     <React.Fragment>
       {!edit && (
         <div className="todo-item">
+          <span className="date">{NewDate}</span>
           <p className="paragraph">{text}</p>
           <div className="icons">
             <span className="icon icon-delete" onClick={handleRemove}>
