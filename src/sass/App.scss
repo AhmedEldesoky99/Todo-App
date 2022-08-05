@@ -1,0 +1,20 @@
+.todo {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 2rem;
+  text-align: center;
+  padding: 8rem 0;
+  .primary-heading {
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}

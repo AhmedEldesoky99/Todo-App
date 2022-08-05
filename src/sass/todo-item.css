@@ -1,0 +1,35 @@
+.todo-item {
+  margin: 0 auto;
+  width: 60%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  color: black;
+  padding: 2rem 1rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(113, 113, 113);
+  gap: 2rem;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .todo-item {
+    width: 90%;
+    padding: 1rem;
+    flex-direction: column;
+  }
+}
+.todo-item .icons {
+  display: block;
+  min-width: 5rem;
+  text-align: center;
+}
+.todo-item .icon {
+  margin-right: 0.2rem;
+  cursor: pointer;
+}
+.todo-item .icon > * {
+  width: 2rem;
+  color: rgb(113, 113, 113);
+}/*# sourceMappingURL=todo-item.css.map */
